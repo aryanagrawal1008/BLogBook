@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class=" bg-gray-100">
+    <div class="container w-full mx-auto dark:bg-gray-800 dark:text-gray-100 ">
+        <%- include('../partials/header_admin.ejs') %>
+        <%- include('../partials/search.ejs') %>
+        <main class="main">
+            <%- body %>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </div>
+
+</body>
+</html>

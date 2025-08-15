@@ -1,0 +1,17 @@
+<h1 class="search_heading text-2xl font-bold m-2">Searched results</h1>
+<section class="latest_post flex flex-wrap items-center justify-center">
+    
+
+    <% posts.forEach(post => { %>
+    <div class="latest_post_card border border-gray-200 dark:border-gray-700 p-4 m-4 w-1/4 hover-shadow hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-105 transition duration-300 ease-in-out cursor-pointer ">
+        <a href="/post/<%= post._id %>">
+        <img src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="latest_post_image w-full h-48 object-cover " alt="">
+        <h3 class="latest_post_title text-xl font-bold"><%= post.title %></h3>
+        <p class="latest_post_description text-gray-600 dark:text-gray-400"><%= post.description.substring(0, 100) + '...' %></p>
+        <p class="latest_post_date text-gray-600 dark:text-gray-400"><%= post.date.toLocaleString() %></p>
+        </a>
+    </div>
+    <% }); %>
+
+   
+</section>

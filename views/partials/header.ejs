@@ -1,0 +1,78 @@
+<div class="header w-full bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
+  <header class="header">
+    <div
+      class="container flex items-center justify-between m-2 bg-gray-100 dark:bg-gray-800 dark:text-gray-100 flex-col sm:flex-row"
+    >
+      <a href="/" class="flex items-center">
+        <img
+          src="https://www.svgrepo.com/show/351781/blog.svg"
+          alt=""
+          class="w-8 h-8 mr-2"
+        />
+        <span class="font-bold">BlogBook</span>
+      </a>
+
+      <nav>
+        <ul class="flex items-center">
+          <li>
+            <a
+              href="/"
+              class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about"
+              class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+              >About</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHvZzbvSwhQXvgGBpNFzgDxptHCBCkqDblmXZxHfsQJgPJcrkSwFXlkpCQWqrKJPJNTxHpn"
+              class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="searchbtn flex flex-wrap">
+        <div
+          class="flex gap-2 mt-2 "
+        >
+         <% if (!user) { %>
+          <a href="/admin" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Admin Login</a>
+          <% } else { %>
+            <div>
+          <a href="/admin/dashboard" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Admin Dashboard</a>
+          </div><div>
+           <a href="/admin/logout" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Logout</a>
+           </div>
+          <% } %>
+        </div>
+
+        <button
+          class="flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 rounded cursor-pointer focus:outline-none focus:bg-gray-200 dark:focus:bg-gray-700 hover:bg-gray-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>

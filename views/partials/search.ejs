@@ -1,0 +1,14 @@
+<div class="searchBar w-full p-4 m-2 bg-gray-100 dark:bg-gray-800 dark:text-gray-100 flex items-center hidden" id="searchBar">
+    <div class="container flex items-center justify-between">
+        <form action="/search" method="post" role="search">
+            <input type="search" name="searchTerm" placeholder="Search..." class="searchInput w-full px-4 py-2 rounded-md focus:outline-none" id="searchInput" aria-label="Search">
+        </form>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.searchbtn').addEventListener('click', function() {
+        document.getElementById('searchBar').classList.toggle('hidden');
+    });
+</script>
+

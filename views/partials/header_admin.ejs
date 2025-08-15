@@ -1,0 +1,31 @@
+<header class="w-full bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
+  <div class="container flex items-center justify-between p-4">
+    <!-- Logo and Title -->
+    <a href="/" class="flex items-center">
+      <img src="https://www.svgrepo.com/show/351781/blog.svg" alt="Blog Logo" class="w-8 h-8 mr-2">
+      <span class="font-bold">BlogBook / Admin</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="flex items-center">
+        <li>
+          <a href="/" class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded">Home</a>
+        </li>
+        <li>
+          <a href="/about" class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded">About</a>
+        </li>
+        <li>
+          <a href="/contact" class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Logout Button -->
+    <form action="/logout" method="POST">
+      <button type="submit" class="px-4 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+        Logout
+      </button>
+    </form>
+  </div>
+</header>

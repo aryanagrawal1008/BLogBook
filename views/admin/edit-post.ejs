@@ -1,0 +1,30 @@
+
+<div class="max-w-xl mx-auto p-6 bg-white rounded shadow mt-10">
+  <h2 class="text-2xl font-semibold mb-4">Edit Post</h2>
+
+<form action="/admin/edit/<%= post._id %>" method="POST" enctype="multipart/form-data" class="space-y-4">
+    <input type="text" name="title" value="<%= post.title %>" placeholder="Title" required class="w-full border p-2 rounded" />
+
+    <textarea name="description" placeholder="Description" required class="w-full border p-2 rounded"><%= post.description %></textarea>
+
+    <input type="file" name="image" onchange="previewImage(event)" class="w-full" />
+    
+    <% if (post.image) { %>
+      <img id="preview" src="<%= post.image %>" class="max-w-xs mt-2 rounded border" />
+    <% } else { %>
+      <img id="preview" class="max-w-xs mt-2 rounded border hidden" />
+    <% } %>
+
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Update Post</button>
+  </form>
+</div>
+
+<script>
+  function previewImage(event) {
+    const preview = document.getElementById('preview');
+    preview.src = URL.createObjectURL(event.target.files[0]);
+    preview.classList.remove("hidden");
+  }
+</script>
+
+
